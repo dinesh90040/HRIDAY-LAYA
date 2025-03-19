@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Login - हृदय-lay</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8; /* Light background */
+      color: #2d3748; /* Dark text */
+    }
+
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #a3bffa 0%, #7f9cf5 100%); /* Soft blue gradient */
+    }
+
+    .input-field {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(209, 213, 219, 0.5);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      color: #2d3748;
+    }
+
+    .input-field::placeholder {
+      color: #718096;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #7f9cf5;
+      box-shadow: 0 0 0 3px rgba(127, 156, 245, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="home.html" class="text-3xl font-bold text-gray-800 hover:text-gray-600 transition-colors">हृदय-lay</a>
+      <div class="space-x-4">
+        <a href="home.html" class="text-gray-800 hover:text-gray-600 transition-colors">Home</a>
+        <a href="about_us.txt" class="text-gray-800 hover:text-gray-600 transition-colors">About</a>
+        <a href="contact_us.txt" class="text-gray-800 hover:text-gray-600 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Doctor Login Section -->
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50 pt-20"> <!-- Added pt-20 for top padding -->
+    <div class="glassmorphism p-8 rounded-lg max-w-md w-full mx-4 mt-16"> <!-- Added mt-16 for margin-top -->
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Doctor Login</h2>
+      <!-- Login Form -->
+      <form class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" class="w-full input-field" placeholder="Enter your email">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Password</label>
+          <input type="password" class="w-full input-field" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-105 transition-transform">
+          Login
+        </button>
+      </form>
+      <!-- Signup Link -->
+      <p class="text-center text-gray-600 mt-6">
+        Don't have an account? <a href="doctor_signup.html" class="text-blue-500 hover:underline">Signup here</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg p-6 text-center">
+    <p class="text-gray-600">&copy; 2025 हृदय-lay. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

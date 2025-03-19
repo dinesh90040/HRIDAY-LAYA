@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>हृदय-lay - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8; /* Soft light blue background */
+      color: #2d3748; /* Dark gray text */
+    }
+
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #a3bffa 0%, #7f9cf5 100%); /* Soft blue gradient */
+    }
+
+    .animated-bg {
+      background: linear-gradient(-45deg, #a3bffa, #7f9cf5, #9f7aea, #d6bcfa);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="home.html" class="text-3xl font-bold text-gray-800 hover:text-gray-600 transition-colors">हृदय-lay</a>
+      <div class="space-x-4">
+        <a href="home.html" class="text-gray-800 hover:text-gray-600 transition-colors">Home</a>
+        <a href="about_us.txt" class="text-gray-800 hover:text-gray-600 transition-colors">About</a>
+        <a href="contact_us.txt" class="text-gray-800 hover:text-gray-600 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50">
+    <div class="text-center glassmorphism p-8 rounded-lg max-w-2xl mx-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Welcome to हृदय-lay</h1>
+      <p class="text-lg text-gray-600 mb-8">
+        Your trusted platform for heart health management. Join us in taking care of your heart.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+        <a href="adminlogin.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-105 transition-transform">Admin</a>
+        <a href="patient.html" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transform hover:scale-105 transition-transform">Patient</a>
+        <a href="doctor.html" class="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transform hover:scale-105 transition-transform">Doctor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D Heart Model Section -->
+  <section class="py-20 gradient-bg">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Explore the Human Heart</h2>
+      <div class="sketchfab-container animate-float">
+        <iframe id="sketchfab-iframe"
+                title="Realistic Human Heart"
+                frameborder="0"
+                allowfullscreen
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                src="https://sketchfab.com/models/3f8072336ce94d18b3d0d055a1ece089/embed?ui_theme=dark&preload=1&transparent=1">
+        </iframe>
+      </div>
+      <button id="play-model" class="mt-6 px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-transform">
+        Start Exploration
+      </button>
+    </div>
+  </section>
+
+  <!-- Heart Health Information Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">Understanding Your Heart</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glassmorphism p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">What is the Heart?</h3>
+          <p class="text-gray-600">
+            The heart is a muscular organ that pumps blood throughout your body. It is located in the chest, slightly to the left, and is about the size of a fist. The heart is responsible for delivering oxygen and nutrients to your tissues and removing carbon dioxide and waste products.
+          </p>
+        </div>
+        <div class="glassmorphism p-6 rounded-lg">
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">Why is Heart Health Important?</h3>
+          <p class="text-gray-600">
+            Maintaining a healthy heart is crucial for overall well-being. A healthy heart ensures proper blood circulation, which supports all bodily functions. Poor heart health can lead to conditions like heart disease, stroke, and high blood pressure, which are leading causes of death worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Cardiologist Locator Section -->
+<section class="py-20 bg-gradient-to-r from-blue-100 to-purple-100">
+  <div class="container mx-auto px-4 text-center">
+    <div class="glassmorphism p-8 rounded-lg max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Find a Cardiologist</h2>
+      <p class="text-lg text-gray-600 mb-6">
+        Locate the nearest heart specialist in your area with just one click. Your heart deserves the best care!
+      </p>
+      <a href="https://www.google.com/search?q=cardiologist+near+me" target="_blank" 
+         class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-transform shadow-lg">
+        <span class="flex items-center justify-center">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          Find a Cardiologist Near Me
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg p-6 text-center">
+    <p class="text-gray-600">&copy; 2025 हृदय-lay. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Play 3D Model on Button Click
+    document.getElementById("play-model").addEventListener("click", function() {
+      var iframe = document.getElementById("sketchfab-iframe");
+      var url = iframe.src;
+
+      // Append autostart=1 to force play on button click
+      if (!url.includes("autostart=1")) {
+        iframe.src = url + "&autostart=1";
+      }
+    });
+  </script>
+</body>
+</html>
